@@ -1,1 +1,52 @@
+This is a raw text document that just outlines the different convensions that I like to use!!!
+
+comment as needed whithin the various languages:
+
+
+These are in python, although change the '#' to the single line comment in whatever language you use! change the ''' to whatever multiline comment your language suppourts!
+
+'''
+AYUSH'S CODE CONVENTIONS
+
+COMMENT TAGS (use ctrl + f to find)
+
+    #CHANGE
+        ^^^ this means that change this command while updating, use this command to mark commands
+        that may need their contents updated to make sense with further updates
+        remove tag, ONLY if revisions will not be needed in the forseeable future
+
+
+    #PLACEHOLDER
+        ^^^ this means that this is purely a placeholder for the future, safely change the name
+        then safely remove
+
+    #ERR: [Reason]
+        ^^^ this means that this block of code is causing an error
+        when flagged, focus on clearing errors
+
+    #INCREMENTAL
+        ^^^ error blocking code, this means that do not change this code, because otherwise errors will be caused
+        can be used to
+    #NULL
+        ^^^ used for code that is not run NOT NULLS!!!!
+    #REVIEW
+        ^^^ used for code that is flagged for review
+    #AUTORUN
+        ^^^ code that is automatically run, use #AUTORUN[END] to specify end of Autorun
+    #SP
+        ^^^ means that you dont know how to spel stuf, if  ur revweing than mke shure tu fics speling erors thancs! :)
+    #$
+        ^^^ means that for especiallly long codeblocks, this is how many lines the code spans (ALWAYS subject to change)
+    '''
+    What Needs to be Done:
+    '''
+        ^^^ means that add the stuff to add in another day, if you have a good idea.
+
+CODE FACES
+    ¯\_(ツ)_/¯ For errors
+    ( ͡° ͜ʖ ͡°) For sneaky statements or eastereggs
+    ಠ_ಠ for security execptions
+    (╯°□°）╯︵ ┻━┻ when something goes wrong
+    o_O hmmm thinking
+'''
 
