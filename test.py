@@ -1,5 +1,4 @@
 #!/usr/bin/env python 3
-
 '''      __
          __]
  \\  // [__
@@ -210,28 +209,59 @@ def hangman():
     time.sleep(0.5)
     print('Word Generated!')
     correct = 0
-
+    print('Directions: guess a Letter, or word. After 6 Incorrect Guesses, the word will be revealed!')
+    alreadyguessed = []
+    timesincorrect = 0
+    correctletters = []
     while correct == 0:
-        print('Directions: guess a Letter, or word. After 6 Incorrect Guesses, the word will be revealed!')
         rawguess0 = input('Your Guess: ')
-        rawguess1 = strip.rawguess0
+        rawguess1 = rawguess0.strip()
         rawguesslen = len(rawguess1)
         #Validility Checker
-        if rawguess len == 1:
+        if len(rawguess1) == 1 and type(rawguess1) == type('A'):
             guess = rawguess1.lower()
-        elif rawguess len < 1:
+        elif len(rawguess1) < 1:
             print('Please Enter one character, like "A"')
+            continue
         else:
-            print('Unknown Error, Restarting')
+            print('Please Enter one character, like "A"')
+            continue
         #Answerchecker
+        guess = rawguess1.lower()
+        print(guess)
+
         if guess in charactercount:
+            print('correct')
+            alreadyguessed.append(guess)
+            correctletters.append(guess)
             #Correct
             '''
             What Needs to be Done:
             Add placment such as __a__a print , also check if the entire word is complete, remove from charactercount or add message that it has already been inputted
             add to a list of letters tried, (Right and wrong)
             '''
+            print('You have already guessed: ')
+            for item in alreadyguessed:
+                print(item)
+            print('Correct Letters: ')
+            for items in correctletters:
+                print(items)
         elif guess not in charactercount:
+            print('Incorrect!')
+            alreadyguessed.append(guess)
+            print('You have already guessed: ')
+            for item in alreadyguessed:
+                print(item)
+            print('Correct Letters: ')
+            for items in correctletters:
+                print(items)
+            if len(correctletters) == 0:
+                print('No correct letters yet!')
+            timesincorrect += 1
+            if timesincorrect == 6:
+                print('Sorry you have guessed incorrectly 6 times, the answer was:', answerword)
+                break
+
             #Incorrect
             '''
             What Needs to be Done:
