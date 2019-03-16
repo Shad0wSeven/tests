@@ -213,11 +213,19 @@ def hangman():
     alreadyguessed = []
     timesincorrect = 0
     correctletters = []
+    #manhanged = ['Left Leg', 'Left Leg, Right Leg', 'Left Leg, Right Leg, Body', 'Left Leg, Right Leg, Body, Left Arm', 'Left Leg, Right Leg, Body, Left Arm,  Right Arm', 'Left Leg, Right Leg, Body, Left Arm,  Right Arm, Head!']
+    #above line not needed anymore!!!!
+    manhanged = ['/', '/ \\', ' | \n/ \\', ' |\\ \n/ \\', '/|\\ \n/ \\', ' O\n/|\\ \n/ \\']
+    print(answerword)
+    attempts = 0
     while correct == 0:
         rawguess0 = input('Your Guess: ')
         rawguess1 = rawguess0.strip()
         rawguesslen = len(rawguess1)
         #Validility Checker
+        if rawguess1.lower() == answerword.lower():
+            print('Great! You are Correct!!! The word was', answerword.lower(), '!')
+            break
         if len(rawguess1) == 1 and type(rawguess1) == type('A'):
             guess = rawguess1.lower()
         elif len(rawguess1) < 1:
@@ -226,55 +234,73 @@ def hangman():
         else:
             print('Please Enter one character, like "A"')
             continue
+        if guess in alreadyguessed:
+            print('Already Guessed!')
+            continue
         #Answerchecker
         guess = rawguess1.lower()
         print(guess)
 
         if guess in charactercount:
-            print('correct')
-            alreadyguessed.append(guess)
-            correctletters.append(guess)
             #Correct
+            print('correct')
+            alreadyguessed.append(guess) #add correct letter to alreadyguessed
+            correctletters.append(guess) #add letter to correct letter list
+
             '''
             What Needs to be Done:
-            Add placment such as __a__a print , also check if the entire word is complete, remove from charactercount or add message that it has already been inputted
-            add to a list of letters tried, (Right and wrong)
+            Add placment such as __a__a print
             '''
-            print('You have already guessed: ')
-            for item in alreadyguessed:
-                print(item)
-            print('Correct Letters: ')
-            for items in correctletters:
-                print(items)
+
+            #already guessed
+            print('You have already Guessed:', alreadyguessed)
+
+            #correct letters
+            print('Correct Letters:', correctletters )
+
+            #hangman
+            print(manhanged[timesincorrect])
+
         elif guess not in charactercount:
             print('Incorrect!')
-            alreadyguessed.append(guess)
-            print('You have already guessed: ')
-            for item in alreadyguessed:
-                print(item)
-            print('Correct Letters: ')
-            for items in correctletters:
-                print(items)
+            alreadyguessed.append(guess) #add letter to already guessed
+
+
+            #already guessed
+            print('You have already Guessed: ', alreadyguessed)
+
+            #correct letters
             if len(correctletters) == 0:
                 print('No correct letters yet!')
+            else:
+                print('Correct Letters:', correctletters )
+            #hangman
+            print(manhanged[timesincorrect])
+
+            #update incorrect
             timesincorrect += 1
             if timesincorrect == 6:
                 print('Sorry you have guessed incorrectly 6 times, the answer was:', answerword)
                 break
 
             #Incorrect
-            '''
-            What Needs to be Done:
-            Add error message, add such as 'Head, Right Arm', for the hangman thing, also make sure to add to a list, so one can know what they have already entered,
-            make sure to count errors,
-            if errors at 6, then reveal answer
-            '''
         else:
             print('Weird Error')
+            continue
 
 
 if __name__ == '__main__':
 	main()
+
+'''
+
+
+ O
+/|\
+/ \
+
+'''
+
 
 
 print('Successfully imported!') # import sucessful
