@@ -2,16 +2,173 @@
 <html>
 
 <head>
-  <title>X2</title>
-</head>
-<link rel="stylesheet" href="style.css" />
+  <title>
+    X2
+  </title>
 
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Karla|Lato|Oxygen|PT+Sans|Roboto|Roboto+Condensed|Rubik|Source+Sans+Pro" rel="stylesheet">
+
+<style>
+body {margin:0;}
+html {
+  scroll-behavior: smooth;
+}
+.navbarul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #c1c1c1;
+  font-family: 'Rubik', sans-serif;
+  position: -webkit-sticky; /* Safari */
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.bottom {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #c1c1c1;
+  font-family: 'Rubik', sans-serif;
+  width: 100%;
+  bottom: 0;
+}
+
+.navbarli {
+  float: left;
+}
+
+.lianav {
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: #333;
+  transition-duration: 1s;
+}
+.active {
+}
+.title {
+  font-family: 'Oxygen', sans-serif;
+  font-size: 70px;
+  padding-top: 40px;
+  padding-bottom: 70px;
+}
+
+.bodytext {
+  font-family: 'Oxygen', sans-serif;
+  font-size: 20px;
+  margin-left: 30px;
+
+
+}
+.title {
+  text-align:center;
+  font-size: 70px;
+}
+
+.centered {
+  text-align: center;
+}
+.rectangle500{
+  height: 500px;
+  width: 44.3%;
+  border-radius: 10px;
+  border: none;
+  margin: 5px;
+  margin-top: 1%
+}
+.hovertext {
+  color:#fff;
+}
+
+.hovertext:hover{
+  color: #cccccc;
+  transition-duration: 1s;
+}
+</style>
+</head>
 
 <body>
-  <h1>X^2 Home</h1>
-  <p>This is the current really really cool HTML page hosted on github!!!!!</p>
-  <h3>X squared will be hosted better later
-  </h3>
+  <ul class="navbarul">
+    <li class="navbarli"><a class="lianav" class="active" href="#home">Home</a></li>
+    <li class="navbarli"><a class="lianav" href="#projects">Projects</a></li>
+    <li class="navbarli"><a class="lianav" href="#contact">About</a></li>
+    <li class="navbarli" style="text-align:right;"><a class="lianav" href="#about">Contact</a></li>
+  </ul>
+  <h1 class="title" id="top" style="padding-top:5%">X<sup>2</sup> home</h1>
+
+
+<p class='bodytext' style="font-size: 20px; text-align: center; ">
+<i>this is X<sup>2</sup>, a company of 2, possibly 3, out to achieve greatness.</i>
+</p>
+
+<h1 class="title" id="#projects" style="padding:2%; font-size: 30px;">current projects</h1>
+
+<div class="rectangle500" style="float: left; margin-left: 5%; background-color: #3a3a3a;">
+  <h1 class='bodytext' style="text-align: center; font-size:20px; color:#fff;">
+    <a href="#Project1" class="hovertext" style="text-decoration: none;">soundualizer</a>
+  </h1>
+
+  <p class='bodytext' style="text-align: center; font-size:15px; color:#fff;">
+    <i>the initiative:</i> <br> To make a program that initializes all sound to the same tone, regardless of speed.
+  </p>
+</div>
+
+
+<div class="rectangle500" style="float: right; margin-right: 5%; background-color: #555;">
+  <h1 class='bodytext' style="text-align: center; font-size:20px; color:#fff;">
+    <a href="#Project2" class="hovertext" style="text-decoration: none;">finalstep</a>
+  </h1>
+
+  <p class='bodytext' style="text-align: center; font-size:15px; color:#fff;">
+    This is a short description of our Second Project.
+  </p>
+</div>
+
+
+<div class="rectangle500" style="float: left; margin-left: 5%; background-color: #a8a8a8">
+  <h1 class='bodytext' style="text-align: center; font-size:20px; color:#fff;">
+    <a href="#Project3" class="hovertext" style="text-decoration: none;">project3</a>
+  </h1>
+
+  <p class='bodytext' style="text-align: center; font-size:15px; color:#fff;">
+    This is a short description of our third Project.
+  </p>
+</div>
+
+
+<div class="rectangle500" style="float: right; margin-right: 5%; background-color: #dbdbdb;">
+  <h1 class='bodytext' style="text-align: center; font-size:20px; color:#fff;">
+    <a href="#Project4" class="hovertext" style="text-decoration: none;">the fourth sequel</a>
+  </h1>
+
+  <p class='bodytext' style="text-align: center; font-size:15px; color:#fff;">
+    This is a short description of our fourth Project.
+  </p>
+</div>
+
+<p class='bodytext' style="font-size: 20px; text-align: center; ">
+  <i> <a class='hovertext' style="text-decoration:none; color: #333;" href="#top">As you can see, our website is still under construction. <br /> Click to go back up and marvel at it again!</a>
+  </i>
+</p>
+
+<ul class="bottom">
+  <p style="font-size: 10px; text-align: center;">
+    <b>Designed by Ayush Nayak in California, Made in California.</b>
+  </p>
+  <p style="text-align: center; font-size: 15px;">
+    <i>Powered by HTML5 CSS3 and Javascript</i>
+  </p>
+</ul>
+
 </body>
 
 
