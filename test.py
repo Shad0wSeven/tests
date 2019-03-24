@@ -97,7 +97,7 @@ def calculator1():
 	print('The answer is: ' + answer)
 
 
-def calculator2(ins):
+def calculator2(ins): #broken
 	''' This Code does not really work right now, all lines are erronous'''
 	inp = str(ins)
 	pars = inp.split(' ')
@@ -194,8 +194,13 @@ def madlibs():
 	Jimmy decided to go down to the store. He really needed some new pencils. All his older ones had broken. He thought, how can I
 	'''
 
+
 def hangman():
-    '''fun hangman game!
+    '''
+    fun hangman game!
+     O
+    /|\
+    / \
     '''
     print('Generating Word . . . ')
     wordbank = [ 'Hello', 'America', 'Finally', 'Someone', 'Somebody', 'Therefore', 'Terminal', 'Activity', 'Exuberant', 'Execute', 'Enlighten', 'Entertaining', 'Settings', 'Messages','Reminding', 'Epic', 'Night', 'Fortnight', 'Seven',
@@ -204,7 +209,7 @@ def hangman():
 
     lengthwordbank = len(wordbank)
     answerword = wordbank[random.randint(0, lengthwordbank)] #generates word
-    charactercount = list(answerword) #splits words into characters
+    charactercount = list(answerword.lower()) #splits words into characters
 
     time.sleep(0.5)
     print('Word Generated!')
@@ -213,10 +218,22 @@ def hangman():
     alreadyguessed = []
     timesincorrect = 0
     correctletters = []
+
+    '''
+    Initializes a certain thing where you can have an underscore for each letter.
+    '''
+    underscoreguess = []
+    xvarone = len(answerword)
+    yvarone = 0
+    while yvarone < xvarone:
+            answerword
+            underscoreguess.append('_')
+            yvarone += 1
+
     #manhanged = ['Left Leg', 'Left Leg, Right Leg', 'Left Leg, Right Leg, Body', 'Left Leg, Right Leg, Body, Left Arm', 'Left Leg, Right Leg, Body, Left Arm,  Right Arm', 'Left Leg, Right Leg, Body, Left Arm,  Right Arm, Head!']
-    #above line not needed anymore!!!!
-    manhanged = ['/', '/ \\', ' | \n/ \\', ' |\\ \n/ \\', '/|\\ \n/ \\', ' O\n/|\\ \n/ \\']
-    print(answerword)
+    #above line not needed anymore!!!! #IRRELAVANT
+
+    manhanged = ['','/', '/ \\', ' | \n/ \\', ' |\\ \n/ \\', '/|\\ \n/ \\', ' O\n/|\\ \n/ \\']
     attempts = 0
     while correct == 0:
         rawguess0 = input('Your Guess: ')
@@ -225,21 +242,22 @@ def hangman():
         #Validility Checker
         if rawguess1.lower() == answerword.lower():
             print('Great! You are Correct!!! The word was', answerword.lower(), '!')
+            randomfillervariable = len(alreadyguessed)
+            print('Took', randomfillervariable, 'Attempts!')
             break
         if len(rawguess1) == 1 and type(rawguess1) == type('A'):
             guess = rawguess1.lower()
         elif len(rawguess1) < 1:
-            print('Please Enter one character, like "A"')
+            print('Please Enter one character, like "A", to guess characters. If you guessed an entire word, this means it was wrong.')
             continue
         else:
-            print('Please Enter one character, like "A"')
+            print('Please Enter one character, like "A", to guess characters. If you guessed an entire word, this means it was wrong.')
             continue
         if guess in alreadyguessed:
             print('Already Guessed!')
             continue
         #Answerchecker
         guess = rawguess1.lower()
-        print(guess)
 
         if guess in charactercount:
             #Correct
@@ -247,17 +265,33 @@ def hangman():
             alreadyguessed.append(guess) #add correct letter to alreadyguessed
             correctletters.append(guess) #add letter to correct letter list
 
-            '''
-            What Needs to be Done:
-            Add placment such as __a__a print
-            '''
+            yvartwo = 0
+            while yvartwo < xvarone:
+                if guess == answerword[yvartwo]:
+                    underscoreguess[yvartwo] = guess
+                    yvartwo += 1
+                elif guess.upper() == answerword[yvartwo]:
+                    underscoreguess[yvartwo] = guess
+                    yvartwo += 1
+                else:
+                    yvartwo += 1
+                    continue
 
+            #Check if all the letters have been guessed
+            quicktestervariable = ''.join(underscoreguess)
+            if quicktestervariable == answerword.lower():
+                print("Great! the word was", answerword.lower(), '!')
+                randomfillervariable = len(alreadyguessed)
+                print('Took', randomfillervariable, 'Attempts!')
+                break
+
+            '''
+            AFTER THIS ONLY PRINT THE DIFFERENT THINGS
+            '''
+            #the like __t__f thing
+            print(' '.join(underscoreguess))
             #already guessed
             print('You have already Guessed:', alreadyguessed)
-
-            #correct letters
-            print('Correct Letters:', correctletters )
-
             #hangman
             print(manhanged[timesincorrect])
 
@@ -265,22 +299,17 @@ def hangman():
             print('Incorrect!')
             alreadyguessed.append(guess) #add letter to already guessed
 
-
+            print(' '.join(underscoreguess))
             #already guessed
             print('You have already Guessed: ', alreadyguessed)
 
-            #correct letters
-            if len(correctletters) == 0:
-                print('No correct letters yet!')
-            else:
-                print('Correct Letters:', correctletters )
             #hangman
             print(manhanged[timesincorrect])
 
             #update incorrect
             timesincorrect += 1
-            if timesincorrect == 6:
-                print('Sorry you have guessed incorrectly 6 times, the answer was:', answerword)
+            if timesincorrect == 7:
+                print('Sorry you have guessed incorrectly 7 times, the answer was:', answerword)
                 break
 
             #Incorrect
@@ -292,14 +321,7 @@ def hangman():
 if __name__ == '__main__':
 	main()
 
-'''
 
-
- O
-/|\
-/ \
-
-'''
 
 
 
