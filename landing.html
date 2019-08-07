@@ -1,0 +1,412 @@
+
+<!DOCTYPE html>
+<html>
+<!--
+# /////   //  //   //////   /////    |||||||   //    //   //////
+# //      //  //   //  //   //  //   ||  /||   //    //        //
+# /////   //////   //////   //  //   || / ||   // // //     //
+#    //   //  //   //  //   //  //   ||/  ||   // // //     //
+# /////   //  //   //  //   /////    |||||||   ////////     //
+-->
+<head>
+  <title>
+    Shad0w - Home
+  </title>
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Shade&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Karla|Lato|Oxygen|PT+Sans|Roboto|Roboto+Condensed|Rubik|Source+Sans+Pro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
+<style>
+/*
+COLOR PALLETE
+#1a1a1a
+#3a3a3a
+#c1c1c1
+
+
+
+
+*/
+
+
+
+body {margin:0;
+      background-color:#1a1a1a;
+}
+html {
+  scroll-behavior: smooth;
+}
+.navbarul { /*This is the part to edit the box*/
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #3a3a3a;
+  font-family: 'Roboto Mono', monospace;
+  position: -webkit-sticky; /* Safari */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  box-shadow: 0px 2px 10px #000;
+}
+.bottom {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #c1c1c1;
+  font-family: 'Rubik', sans-serif;
+  width: 100%;
+  bottom: 0;
+}
+.navbarli {
+  float: left;
+}
+.lianav {
+  display: block;
+  color: #c1c1c1;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  color: #fff;
+  transition-duration: 1s;
+  text-shadow: 1px 1px 1px #000000;
+}
+.active {
+}
+.title {
+  font-family: 'Oxygen', sans-serif;
+  font-size: 70px;
+  padding-top: 40px;
+  padding-bottom: 70px;
+}
+.bodytext {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+  margin-left: 30px;
+  color: #c1c1c1;
+}
+.title {
+  text-align:center;
+  font-size: 70px;
+  color: #fff;
+}
+.centered {
+  text-align: center;
+}
+.rectangle500{
+  border-radius: 10px;
+  border: none;
+  margin: 5px;
+  margin-top: 1%;
+  box-shadow: 1px 1px 5px #000;
+}
+.hovertext {
+  color:#fff;
+}
+.hovertext:hover{
+  color: #cccccc;
+  transition-duration: 1s;
+}
+.largetitle {
+    font-family: 'Bungee Shade', cursive;
+    text-align: left;
+    font-size: 1000%;
+    margin-left: 70px;
+    color: #c1c1c1;
+}
+
+.square {
+  height: 520px;
+  width:  250px;
+  background-color: #555;
+}
+.circle {
+  height: 250px;
+  width: 250px;
+  background-color: #555;
+  border-radius: 50%;
+}
+#header {
+  background-color: #3a3a3a;
+  color: black;
+  text-align: center;
+  font-size: 90px; 
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: 0.2s;
+  overflow: hidden;
+}
+.centeredbox {
+  background-color: #c1c1c1;
+  height: 520px;
+  width:  250px;
+  color:  #3a3a3a;
+}
+
+
+
+
+/* Strikethrough 2px*/
+
+.strikethrough {
+	display: inline-block;
+	position: relative;
+	transition: all 0.5s cubic-bezier(.55, 0, .1, 1);
+}
+
+.strikethrough:after {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 2px;
+	box-shadow: 0 1px #c1c1c1;
+	margin-top: -0.7em;
+	background: #c1c1c1;
+	transform-origin: center left;
+	animation: strikethrough 1s 0.5s cubic-bezier(.55, 0, .1, 1) 1;
+	transition: transform 0.5s cubic-bezier(.55, 0, .1, 1);
+}
+
+
+/* Little hover effect */
+
+.strikethrough:hover {
+  color: #1a1a1a;
+	background:#c1c1c1;
+}
+
+.strikethrough:hover:after {
+	transform: scaleX(0);
+	transform-origin: center right;
+}
+
+
+
+/* Strikethrough 10px*/
+
+.strikethroughnavbar {
+	display: inline-block;
+	position: relative;
+	transition: all 0.5s cubic-bezier(.55, 0, .1, 1);
+}
+
+.strikethroughnavbar:after {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 10px;
+	box-shadow: 0 1px #c1c1c1;
+	margin-top: -0.7em;
+	background: #c1c1c1;
+	transform-origin: center left;
+	animation: strikethrough 1s 0.5s cubic-bezier(.55, 0, .1, 1) 1;
+	transition: transform 0.5s cubic-bezier(.55, 0, .1, 1);
+}
+
+
+/* Little hover effect */
+
+.strikethroughnavbar:hover {
+/**/
+}
+
+.strikethroughnavbar:hover:after {
+	transform: scaleX(0);
+	transform-origin: center right;
+}
+
+/*End of Strikethrough Stuff*/
+.strikethroughtexthover {
+  color: #c1c1c1;
+  text-decoration: none;
+  }
+
+
+.strikethroughtexthover:hover {
+  color: #1a1a1a;
+	background:#c1c1c1;
+  text-decoration: none;
+  transition-duration: 1s;
+}
+
+#aboutrectangle {
+  text-align: center; 
+  border-radius: 10px; 
+  border: none; margin: 5%; 
+  margin-top: 1%; 
+  box-shadow: 1px 3px 10px #000; 
+  background-color: #3a3a3a; 
+  padding: 5%;
+}
+#aboutrectangle:hover {
+  box-shadow: 1px 10px 30px #000; 
+  transition-duration: 1s;
+}
+
+.aboutrectangle {
+  text-align: center; 
+  border-radius: 10px; 
+  border: none; margin: 5%; 
+  margin-top: 1%; 
+  box-shadow: 1px 3px 10px #000; 
+  background-color: #3a3a3a; 
+  padding: 5%;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+  color: #c1c1c1;
+}
+.aboutrectangle:hover {
+  box-shadow: 1px 10px 30px #000; 
+  transition-duration: 1s;
+}
+
+/* Keyframes for initial animation */
+
+@keyframes strikethrough {
+	from {
+		transform: scaleX(0);
+	}
+	to {
+		transform: scaleX(1);
+	}
+}
+
+@keyframes strikethroughnavbar {
+	from {
+		transform: scaleX(0);
+	}
+	to {
+		transform: scaleX(1);
+	}
+}
+
+</style>
+</head>
+<!--Start Of Content-->
+<body>
+
+  <!--Navbar-->
+  <div id="header" style="z-index:99;">
+    <ul class="navbarul">
+      <li class="navbarli"><a class="lianav" class="active" href="index.html"><span class="strikethroughnavbar">Home</span> </a></li>
+      <li class="navbarli"><a class="lianav" href="project.html"><span class="strikethroughnavbar">Projects</span></a></li>
+      <li class="navbarli"><a class="lianav" href="aboutme.html"><span class="strikethroughnavbar">About</span></a></li>
+      <li class="navbarli"><a class="lianav" href="contactme.html"><span class="strikethroughnavbar">Contact</span></a></li>
+      <li class="navbarli"><a class="lianav" href="fanfiction.html"><span class="strikethroughnavbar">Fanfictions</span></a></li>
+    </ul>
+  </div>
+
+
+  <!--Title-->
+    <h1 class="largetitle" style="padding-top: 200px;">HI I'M</br> SHAD0W!</h1>
+    
+
+  <!--Welcome Box-->    
+    <div class="bodytext" id="aboutrectangle">
+        <span style="font-size: 30px; font-family: 'Oxygen', sans-serif;"><b>Welcome to my Page!</b></span><br><br>
+        You can check out what I'm up to in <span class="strikethrough"><a href="projects.html" class="strikethroughtexthover" style="text-decoration: none;">Projects</a></span>,
+        see my story and thoughts in <span class="strikethrough"><a href="about.html" class="strikethroughtexthover" style="text-decoration: none;">About</a></span>,<br>
+        or see if you can try to contact me in <span class="strikethrough"><a href="contact.html" class="strikethroughtexthover" style="text-decoration: none;">Contact</a></span>. <br><br>
+        <i>If you're really sneaky or just bored, or want to see what I'm writing, head over to <span class="strikethrough"><a href="fanfictions.html" class="strikethroughtexthover" style="text-decoration: none;">Fanfictions</a></span>.</i><br><br><br><br>
+        <span style="font-size: 30px; font-family: 'Oxygen', sans-serif;">But if you're just here cause why not, stick around, and check my page out!</span><br><br>
+    </div>
+
+
+  <!--News Title-->
+    <h1 class="largetitle" style="font-size:100px;">TECH NEWS!
+    <span style="font-size: 30px; font-family: 'Oxygen', sans-serif;"><b><i><br>(and my news)</i></b></span>
+    </h1>
+  
+  
+  <!--Techlinked-->
+  <h1 class="largetitle" style="font-size: 30px;">
+    <span class="strikethrough"><a href="https://www.youtube.com/channel/UCeeFfhMcJa1kjtfZAGskOCA/videos" class="strikethroughtexthover" style="text-decoration: none;">Techlinked for the latest technews!</a></span>
+  </h1>
+
+    <!--Breaking-->
+    <div class="aboutrectangle" style="text-align: left;">
+        <span style="font-size: 30px; font-family: 'Oxygen', sans-serif;"><b>TechNews that hasn't happened yet!</b></span><br><br>
+        Looks like we need ourselves some more TECH NEWS!<br>
+        <i>
+        <span class="strikethrough"><a href="about:blank" class="strikethroughtexthover" style="text-decoration: none;">Go somewhere! -></a></span><br>
+        <span class="strikethrough"><a href="about:blank" class="strikethroughtexthover" style="text-decoration: none;">Somewhere else! -></a></span>
+        </i>
+    </div>
+  <!--Main News-->
+    <div class="aboutrectangle" style="text-align: left;">
+        <span style="font-size: 30px; font-family: 'Oxygen', sans-serif;"><b>Blender 2.8 Released!!! (7.29.19)</b></span><br><br>
+        After A long wait, and lots of teasing, the Blender Project released Blender 2.8.0 Stable release. This release is monumental, and is pretty much like the difference between iOS 6 and 7. 
+        Of course Blender decided to name it 2.8 instead of something cool like 3.0 or X or Omega or Phoenix, or something else. Nevertheless, its a really bountiful update
+        and if you are into 3D you should check it out. As for me, I'm still trying to get the hang of 2.79 so I'll ignore that update button for now, 
+        but cycles and other features are getting wayyyy better!!!!<br>
+        <i>
+        <span class="strikethrough"><a href="https://www.blender.org/download/" class="strikethroughtexthover" style="text-decoration: none;">Blender Download -></a></span><br>
+        <span class="strikethrough"><a href="https://www.blender.org/download/releases/2-80/" class="strikethroughtexthover" style="text-decoration: none;">See the arcticle on Blender.org -></a></span>
+        </i>
+    </div>
+  <!--Secondary News-->
+    <div class="aboutrectangle" style="text-align: left;">
+        <span style="font-size: 30px; font-family: 'Oxygen', sans-serif;"><b>iPhone 2019 Rumours (Ongoing)</b></span><br><br>
+        As the season gets colder, and the threat of school comes ever closer, a beast lies wating somewhere on the horizon. The second week of September to be exact. 
+        That beast, is the iPhone XI or 11 or whatever they'll call it this time. They say they'll look the same on the front, but have an added camera for ugliness. The Xs
+        and Xs max replacements will have triple cameras, while the Xr replacement will have 2, it's pretty easy to infer that "Shot on iPhone" will be making quite the comeback 
+        this year as cameras are what the apple with the bite taken out of it is focusing on this year. All in all they look really dumb to me, but thats coming from someone who traded
+        and Xr for a 6 because faceid and the notch sucks. 2020 looks really cool though!<br>
+        <i>
+        <span class="strikethrough"><a href="https://www.macrumors.com/roundup/2019-iphones/" class="strikethroughtexthover" style="text-decoration: none;">Check out the rumours on MacRumours! -></a></span><br>
+        <span class="strikethrough"><a href="https://www.youtube.com/user/EverythingApplePro" class="strikethroughtexthover" style="text-decoration: none;">Get the latest Apple Related News, on Everything Apple Pro's Channel! -></a></span>
+        </i>
+    </div>
+
+    <div class="aboutrectangle" style="text-align: left;">
+        <span style="font-size: 30px; font-family: 'Oxygen', sans-serif;"><b>AMD Ryzen 3rd Generation (7.7.19)</b></span><br><br>
+        Third time's the charm. 2 years ago when AMD first released their Intel Core rivals, Ryzen based on the Zen architecture and with the AM4 socket, people
+        (like me) thought it would be a cool idea and encouraged AMD to keep going strong, and then turned around and asked for the Core i7 7700k specs again. Well AMD
+        was persistant and their 2nd gen was greater than the first, and they boasted immunity to Spectre and Meltdown (If you still remember those xD) They were the Value Champs, and 
+        if you wanted a cheap system, that still offered admirable performance, than Ryzen was the way to go. This time, they absolutley destroyed Team Blue. While Santa Clara is mucking 
+        around with the semi-falied Coffee Lake Refresh, that no reviewer seems to care about, (except the 9900k) the <i>also</i> Santa Clara CA based AMD fired back some big shots
+        with this year's Ryzen. As reviewers get their hands on the chips I can't wait to see Team Blue turn Red.<br>
+        <i>
+        <span class="strikethrough"><a href="https://www.techradar.com/news/amd-ryzen-3rd-generation" class="strikethroughtexthover" style="text-decoration: none;">Check out the story on TechRadar -></a></span><br>
+        <span class="strikethrough"><a href="https://www.anandtech.com/show/14605/the-and-ryzen-3700x-3900x-review-raising-the-bar" class="strikethroughtexthover" style="text-decoration: none;">Anandtech's Review of the 3700/3900X -></a></span>
+        </i>
+    </div>
+
+
+
+  <!--Footer-->
+    <ul class="bottom">
+      <p style="font-size: 10px; text-align: center;">
+        <b>Designed by Ayush Nayak in California, </br> Made in California.</b>
+      </p>
+      <p style="text-align: center; font-size: 15px;">
+        <i>Powered by HTML5 CSS3 and Javascript</i>
+      </p>
+    </ul>
+
+<!--End Of Content!!!-->
+
+<script>
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      document.getElementById("header").style.fontSize = "30px";
+      document.getElementsByClassName("strikethroughnavbar:after").style.height = "10px";
+    } else {
+      document.getElementById("header").style.fontSize = "90px";
+      document.getElementsByClassName("strikethroughnavbar:after").style.height = "2px";
+
+    }
+  }
+  </script>
+</body>
+
+</html>
